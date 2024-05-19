@@ -21,3 +21,9 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
         registry.enableSimpleBroker("/topic");
     }
 }
+
+/**
+ * WebSocket Endpoint: Clients will connect to /ws for WebSocket communications. SockJS is enabled to provide fallback options.
+ * Message Mapping: Messages sent to the server should have a destination prefix of /app and will be routed to appropriate message handling methods in your application.
+ * Message Broker: Messages with the prefix /topic will be handled by the simple in-memory message broker and broadcasted to all connected clients subscribed to those topics.
+ */
